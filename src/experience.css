@@ -1,0 +1,37 @@
+/* Loaded after the original visual styles. No persistent full-screen noise layer. */
+.grain{display:none}
+.glass-callout,.tilt-card,.visit-panel{backdrop-filter:none}
+.tilt-card{will-change:auto}
+.effects-controls{position:fixed;right:4.5%;bottom:45px;z-index:21;display:flex;gap:8px}
+.effects-controls button{border:1px solid #b6987355;background:#15110ef2;border-radius:20px;padding:8px 12px;font-size:10px}
+.effects-controls button[aria-pressed=true]{border-color:#d48c5f;color:#efc6a0}
+[data-reduced] .card-glare{display:none}
+[data-reduced] .site-header,[data-reduced] .mobile-nav{backdrop-filter:none}
+.story-section{height:auto;min-height:max(100svh,700px)}
+.section-copy,.flavor-copy{position:relative;top:auto;padding-top:130px;padding-bottom:80px}
+.flavor-copy{width:36%}
+.finale-section{height:auto;min-height:200svh}
+.finale-sticky{height:auto;min-height:100svh;padding-top:280px}
+.finale-heading{top:110px}
+@media(max-width:700px){
+  .story-section{min-height:100svh}
+  .hero-section{min-height:max(100svh,680px)}
+  .hero-bottom{bottom:75px}
+  .section-copy,.flavor-copy{padding-top:105px;padding-bottom:85px;width:85%;left:6%;right:auto}
+  .callouts,.flavor-options{margin-top:220px}
+  .model-caption{top:340px}
+  .finale-sticky{min-height:100svh;padding-top:330px;padding-bottom:85px;top:min(0px,calc(100svh - 900px))}
+  .finale-heading{top:100px}
+  .effects-controls{right:6%;bottom:39px}
+  .hero-product-tag{top:52%}
+}
+@media(min-width:701px) and (max-height:700px){
+  .story-section{min-height:700px}
+  .finale-sticky{top:min(0px,calc(100svh - 700px));min-height:700px}
+}
+
+/* Keep the decorative fallback clear of chapter headings. */
+.fallback-chapter-3{top:260px;transform:translate(-50%,-50%) scale(.5)}
+@media(max-width:700px){.fallback-chapter-1,.fallback-chapter-2{top:360px;left:65%;transform:translate(-50%,-50%) scale(.6)}}
+
+.finale-sticky{top:var(--sticky-top,0px)}
